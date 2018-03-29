@@ -16,6 +16,25 @@
   <link rel="stylesheet" href="assets/animatecss/animate.min.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <script>
+    var player
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          width: 1280,
+          height: 720,
+          videoId: 'M7lc1UVf-VE'
+        })
+      }
+
+      function toggleSound() {
+        if (player.isMuted()) {
+          player.unMute()
+        } else {
+          player.mute()
+        }
+      }
+  </script>
   
   
   
@@ -31,20 +50,14 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
-                <iframe id="myVideo" width="0" height="0" src="http://www.youtube.com/embed/Zf0MBnHPpKs?rel=0&autoplay=1"frameborder="0" allowfullscreen></iframe>
+                <iframe width="0" height="0" src="http://www.youtube.com/embed/HL548cHH3OY?rel=0&autoplay=1"frameborder="0" allowfullscreen></iframe>
                 <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1">
-                    Tuitaro // Page Unfinished 😊</h1>
-                    
+                    Tuitaro</h1>
                 
-                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-primary display-4" href="discord.html">Discord</a>
+                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-primary display-4" href="discord.html">Discord</a><h2>Work In Progress</h2>
                         <a class="btn btn-md btn-white-outline display-4" href="http://steamcommunity.com/id/Tuitaro">Steam</a></div>
-                        <a class="btn btn-md btn-white-outline display-4" onclick="setHalfVolume()">Volume Down</a></div>
-                        <script>
-                        var vid = document.getElementById("myVideo");
-                        function setHalfVolume() { 
-                            vid.volume = 0.2;
-                        } 
-                        </script> 
+              <div class=volume-button onmousedown=toggleSound();></div>
+                
             </div>
         </div>
     </div>
